@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SIP Calculator</title>
+  <link rel="stylesheet" href="style/sip-calculator.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <div class="calculator-container">
+    <h1>SIP Calculator</h1>
+    
+    <div class="input-group">
+      <label for="sip-amount">Monthly SIP Amount (₹):</label>
+      <input type="number" id="sip-amount" placeholder="e.g., 5000" min="100" value="5000">
+    </div>
+
+    <div class="input-group">
+      <label for="interest-rate">Expected Annual Return (%):</label>
+      <input type="number" id="interest-rate" placeholder="e.g., 12" min="1" value="12">
+    </div>
+
+    <div class="input-group">
+      <label for="tenure">Investment Tenure:</label>
+      <div class="tenure-input">
+        <input type="number" id="tenure-value" placeholder="e.g., 5" min="1" value="5">
+        <select id="tenure-unit">
+          <option value="years">Years</option>
+          <option value="months">Months</option>
+        </select>
+      </div>
+    </div>
+
+    <button onclick="calculateSIP()">Calculate</button>
+
+    <div class="results">
+      <h2>Results</h2>
+      <div class="result-item">
+        <span>Total Invested:</span>
+        <span id="total-invested">₹0</span>
+      </div>
+      <div class="result-item">
+        <span>Interest Earned:</span>
+        <span id="interest-earned">₹0</span>
+      </div>
+      <div class="result-item">
+        <span>Maturity Amount:</span>
+        <span id="maturity-amount">₹0</span>
+      </div>
+    </div>
+
+    <div class="chart-container">
+      <canvas id="sip-chart"></canvas>
+    </div>
+  </div>
+
+  <script src="scripts/sip-calculator.js"></script>
+</body>
+</html>

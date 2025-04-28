@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Universal Unit Converter</title>
+    <link rel="stylesheet" href="style/unit-convertor.css">
+</head>
+<body>
+    <div class="converter-container">
+        <h1>Universal Unit Converter</h1>
+        
+        <div class="category-selector">
+            <label for="category">Select Category:</label>
+            <select id="category">
+                <option value="length">Length</option>
+                <option value="weight">Weight</option>
+                <option value="volume">Volume (Liquid)</option>
+                <option value="area">Area</option>
+                <option value="pressure">Pressure</option>
+                <option value="temperature">Temperature</option>
+                <option value="speed">Speed</option>
+                <option value="time">Time</option>
+                <option value="energy">Energy</option>
+            </select>
+        </div>
+
+        <div class="converter-box">
+            <div class="input-group">
+                <input type="number" id="input-value" placeholder="Enter value" value="1">
+                <select id="input-unit"></select>
+            </div>
+
+            <div class="equals-sign">=</div>
+
+            <div class="output-group">
+                <input type="number" id="output-value" placeholder="Result" readonly>
+                <select id="output-unit"></select>
+            </div>
+        </div>
+
+        <div class="swap-btn" onclick="swapUnits()">↔ Swap Units</div>
+    </div>
+
+    <script src="scripts/unit-converter.js"></script>
+</body>
+</html>

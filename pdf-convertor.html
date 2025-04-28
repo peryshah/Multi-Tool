@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PDF Converter | Word & Excel</title>
+    <link rel="stylesheet" href="style/pdf-convertor.css">
+</head>
+<body>
+    <div class="container">
+        <h1>PDF Converter</h1>
+        <div class="converter-tabs">
+            <button class="tab-btn active" data-tab="pdf-to-word">PDF to Word</button>
+            <button class="tab-btn" data-tab="pdf-to-excel">PDF to Excel</button>
+        </div>
+
+        <div id="pdf-to-word" class="tab-content active">
+            <div class="upload-area" id="word-drop-zone">
+                <input type="file" id="word-file-input" accept=".pdf">
+                <div class="icon">📄➡️📝</div>
+                <h2>PDF to Word Converter</h2>
+                <p>Drag & drop PDF file or click to browse</p>
+                <div class="file-info hidden" id="word-file-info"></div>
+                <div class="progress-container hidden" id="word-progress">
+                    <div class="progress-bar"></div>
+                    <span class="progress-text">Processing...</span>
+                </div>
+            </div>
+            <button id="convert-to-word" class="convert-btn" disabled>Convert to Word</button>
+        </div>
+
+        <div id="pdf-to-excel" class="tab-content">
+            <div class="upload-area" id="excel-drop-zone">
+                <input type="file" id="excel-file-input" accept=".pdf">
+                <div class="icon">📄➡️📊</div>
+                <h2>PDF to Excel Converter</h2>
+                <p>Drag & drop PDF file or click to browse</p>
+                <div class="file-info hidden" id="excel-file-info"></div>
+                <div class="progress-container hidden" id="excel-progress">
+                    <div class="progress-bar"></div>
+                    <span class="progress-text">Processing...</span>
+                </div>
+            </div>
+            <button id="convert-to-excel" class="convert-btn" disabled>Convert to Excel</button>
+        </div>
+
+        <div class="disclaimer">
+            <p>Note: For complex PDFs, some formatting may not transfer perfectly.</p>
+        </div>
+    </div>
+
+    <!-- Load libraries from CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.11.338/pdf.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/docx/7.1.0/docx.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
+    
+    <!-- Main script -->
+    <script src="scripts/pdf-convertor.js"></script>
+</body>
+</html>

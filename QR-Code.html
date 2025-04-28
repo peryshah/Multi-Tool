@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>QR Code Generator</title>
+  <link rel="stylesheet" href="style/QR-code.css">
+</head>
+<body>
+  <div class="container">
+    <h1>QR Code Generator</h1>
+
+    <textarea id="qr-text" placeholder="Enter text, URL, phone number..." rows="4"></textarea>
+
+    <button onclick="generateQR()">Generate QR</button>
+
+    <div id="qr-result" class="hidden">
+      <img id="qr-image" src="" alt="QR Code" />
+      <button onclick="downloadQR()">Download QR</button>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrious/4.0.2/qrious.min.js"></script>
+  <script src="scripts/QR-code.js"></script>
+</body>
+</html>

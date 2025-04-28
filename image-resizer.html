@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Image Resizer & Cropper</title>
+    <script src="https://cdn.jsdelivr.net/npm/heic2any@0.0.3/dist/heic2any.min.js"></script>
+    <link rel="stylesheet" href="style/image-resizer.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Image Resizer & Cropper</h1>
+
+        <input type="file" id="image-upload" accept="image/*" />
+
+        <canvas id="canvas" class="hidden"></canvas>
+
+        <div class="controls hidden" id="resize-controls">
+            <label>Compression (1%-100%):</label>
+            <input type="range" id="quality-range" min="1" max="100" value="100" />
+            <span id="quality-value">100%</span>
+            <button onclick="resizeImage()">Apply Compression</button>
+        </div>
+
+        <div class="controls hidden" id="crop-controls">
+            <label>X: <input type="number" id="crop-x" /></label>
+            <label>Y: <input type="number" id="crop-y" /></label>
+            <label>Width: <input type="number" id="crop-width" /></label>
+            <label>Height: <input type="number" id="crop-height" /></label>
+            <button onclick="cropImage()">Crop Image</button>
+        </div>
+
+        <button id="download-btn" class="convert-btn hidden" onclick="downloadImage()">Download</button>
+    </div>
+
+    <script src="libs/heic2any.min.js"></script>
+    <script src="scripts/image-resizer.js"></script>
+</body>
+
+</html>

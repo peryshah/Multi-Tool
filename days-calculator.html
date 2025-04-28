@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Days Calculator</title>
+    <link rel="stylesheet" href="style/days-calculator.css">
+</head>
+
+<body>
+
+    <body>
+        <div class="container">
+            <h1>Days Calculator</h1>
+            <div class="converter-tabs">
+                <button class="tab-btn active" data-tab="future-date">Future Date</button>
+                <button class="tab-btn" data-tab="days-between">Days Between</button>
+                <button class="tab-btn" data-tab="age-calculator">Age Calculator</button>
+            </div>
+
+            <!-- Future Date Calculator -->
+            <div id="future-date" class="tab-content active">
+                <label>Start Date:</label>
+                <input type="date" id="start-date" />
+                <label>Number of Days:</label>
+                <input type="number" id="days-to-add" placeholder="Enter days" />
+                <button class="convert-btn" onclick="calculateFutureDate()">Calculate</button>
+                <p id="future-result"></p>
+            </div>
+
+            <!-- Days Between Calculator -->
+            <div id="days-between" class="tab-content">
+                <label>From Date:</label>
+                <input type="date" id="from-date" />
+                <label>To Date:</label>
+                <input type="date" id="to-date" />
+                <button class="convert-btn" onclick="calculateDaysBetween()">Calculate</button>
+                <p id="between-result"></p>
+            </div>
+
+            <!-- Age Calculator -->
+            <div id="age-calculator" class="tab-content">
+                <label>Birth Date:</label>
+                <input type="date" id="birth-date" />
+                <button class="convert-btn" onclick="calculateAge()">Calculate Age</button>
+                <p id="age-result"></p>
+            </div>
+        </div>
+        <script src="scripts/days-calculator.js"></script>
+    </body>
+
+</html>
