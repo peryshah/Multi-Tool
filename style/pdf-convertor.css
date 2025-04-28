@@ -1,0 +1,232 @@
+:root {
+    --primary-color: #4a6bdf;
+    --secondary-color: #34a853;
+    --error-color: #ea4335;
+    --dark-color: #2d3748;
+    --light-color: #f8f9fa;
+    --border-color: #e2e8f0;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #4b6cb7, #182848);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: var(--primary-color);
+}
+
+.converter-tabs {
+    display: flex;
+    margin-bottom: 25px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.tab-btn {
+    padding: 12px 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 500;
+    color: #64748b;
+    position: relative;
+    transition: all 0.2s;
+}
+
+.tab-btn:hover {
+    color: var(--primary-color);
+}
+
+.tab-btn.active {
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+.tab-btn.active::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: var(--primary-color);
+}
+
+.tab-content {
+    display: none;
+    animation: fadeIn 0.3s ease;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.upload-area {
+    border: 2px dashed var(--border-color);
+    border-radius: 8px;
+    padding: 30px 20px;
+    text-align: center;
+    margin-bottom: 20px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.upload-area:hover {
+    border-color: var(--primary-color);
+    background-color: rgba(74, 107, 223, 0.03);
+}
+
+.upload-area input[type="file"] {
+    display: none;
+}
+
+.icon {
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+.upload-area h2 {
+    margin-bottom: 10px;
+    color: var(--dark-color);
+    font-size: 20px;
+}
+
+.upload-area p {
+    color: #64748b;
+    margin-bottom: 5px;
+}
+
+.file-info {
+    margin-top: 15px;
+    padding: 8px;
+    background-color: #f8fafc;
+    border-radius: 4px;
+    font-size: 14px;
+    color: var(--dark-color);
+}
+
+.progress-container {
+    margin-top: 20px;
+    width: 100%;
+}
+
+.progress-bar {
+    height: 6px;
+    background-color: #e2e8f0;
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.progress-bar::after {
+    content: '';
+    display: block;
+    height: 100%;
+    width: 0;
+    background-color: var(--primary-color);
+    transition: width 0.3s;
+}
+
+.progress-text {
+    display: block;
+    margin-top: 5px;
+    font-size: 14px;
+    color: #64748b;
+}
+
+.hidden {
+    display: none;
+}
+
+.convert-btn {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    width: 100%;
+    transition: all 0.2s;
+}
+
+.convert-btn:hover {
+    background-color: #3a56c7;
+    transform: translateY(-1px);
+}
+
+.convert-btn:disabled {
+    background-color: #94a3b8;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.disclaimer {
+    margin-top: 30px;
+    padding: 15px;
+    background-color: #f8fafc;
+    border-radius: 6px;
+    font-size: 14px;
+    color: #64748b;
+    text-align: center;
+}
+
+/* Loading spinner */
+.spinner {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 3px solid rgba(255,255,255,.3);
+    border-radius: 50%;
+    border-top-color: white;
+    animation: spin 1s ease-in-out infinite;
+    margin-right: 8px;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    .container {
+        padding: 20px;
+    }
+    
+    .tab-btn {
+        padding: 10px 15px;
+        font-size: 14px;
+    }
+    
+    .upload-area {
+        padding: 20px 15px;
+    }
+}

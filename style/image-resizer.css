@@ -1,0 +1,80 @@
+/* Modern Glassmorphism Style */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #4b6cb7, #182848);
+    color: #fff;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.container {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(12px);
+    padding: 30px;
+    border-radius: 20px;
+    max-width: 500px;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+input[type="file"],
+input[type="number"],
+input[type="range"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+}
+
+input[type="range"] {
+    cursor: pointer;
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+    font-weight: 500;
+}
+
+button {
+    margin-top: 10px;
+    padding: 12px 20px;
+    background: linear-gradient(to right, #ff6a88, #ff99ac);
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    width: 100%;
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: scale(1.03);
+}
+
+canvas {
+    max-width: 100%;
+    margin-top: 20px;
+    border-radius: 10px;
+}
+
+.hidden {
+    display: none;
+}
+
+.controls {
+    margin-top: 20px;
+}

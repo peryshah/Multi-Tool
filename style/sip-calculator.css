@@ -1,0 +1,109 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #4b6cb7, #182848);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  }
+  
+  .calculator-container {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    width: 100%;
+    max-width: 600px;
+  }
+  
+  h1 {
+    color: #2c3e50;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  .input-group {
+    margin-bottom: 20px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 8px;
+    color: #34495e;
+    font-weight: 600;
+  }
+  
+  input, select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 16px;
+    box-sizing: border-box;
+  }
+  
+  .tenure-input {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .tenure-input input {
+    flex: 2;
+  }
+  
+  .tenure-input select {
+    flex: 1;
+  }
+  
+  button {
+    width: 100%;
+    padding: 14px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  button:hover {
+    background-color: #2980b9;
+  }
+  
+  .results {
+    margin-top: 30px;
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 8px;
+  }
+  
+  .results h2 {
+    margin-top: 0;
+    color: #2c3e50;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+  }
+  
+  .result-item {
+    display: flex;
+    justify-content: space-between;
+    margin: 15px 0;
+    font-size: 18px;
+  }
+  
+  .result-item span:first-child {
+    color: #7f8c8d;
+  }
+  
+  .result-item span:last-child {
+    font-weight: 600;
+    color: #2c3e50;
+  }
+  
+  .chart-container {
+    margin-top: 30px;
+    height: 300px;
+  }
